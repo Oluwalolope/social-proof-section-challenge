@@ -1,0 +1,156 @@
+/* Mobile View */
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-image: url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    font-family: 'League Spartan', sans-serif;
+}
+.container {
+    display: grid;
+    width: 80%;
+    min-height: 600px;
+}
+header {
+    text-align: center;
+    padding: 1em;
+    color: hsl(303, 10%, 53%);
+}
+h1 {
+    font-size: 2rem;
+    padding-bottom: 1em;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+.rating {
+    display: grid;
+    min-width: 300px;
+    font-weight: 500;
+    text-align: center;
+}
+.box {
+    display: grid;
+    box-sizing: border-box;
+    grid-auto-flow: row;
+    place-items: center;
+    background-color: hsl(300, 24%, 96%);
+    color: hsl(300, 43%, 22%);
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+.icon {
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    place-self: center;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-image: url(images/icon-star.svg);
+    background-size: 20%;
+}
+.testimonials {
+    display: grid;
+    color: white;
+    font-weight: 500;
+}
+.testimonials p {
+    font-weight: 400;
+}
+span {
+    display: block;
+    font-weight: 400;
+    color: hsl(333, 80%, 67%);
+}
+.profile-picture {
+    border-radius: 50%;
+}
+.heading {
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    padding-bottom: 1em; 
+}
+.card {
+    margin-bottom: 1em;
+    background-color: hsl(300, 43%, 22%);
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 10px;
+    height: 230px;
+}
+.profile-picture {
+    width: 48px;
+    height: auto;
+    margin-right: 1em;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* desktop view */
+@media (min-width: 1060px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    header {
+        grid-column: 1 ;
+        grid-row: 1;
+        text-align: start;
+    }
+    header h1 {
+        padding-right: 2em
+    }
+    .rating {
+        grid-column: 3;
+        grid-row: 1;
+        padding-top: 1.5em;
+    }
+    .box {
+        grid-auto-flow: column;
+    }
+    .box--1 {
+        margin-left: -4em;
+    }
+    .box--2 {
+        margin-left: -2em;
+    }
+    .icon {
+        background-position: left;
+    }
+    .testimonials{
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+    .card {
+        grid-row: 2;
+        width: 95%;
+    }
+    .card--1{
+        grid-column: 1;
+        place-self: start;
+    }
+    .card--2 {
+        grid-column: 2;
+        place-self: center;
+        margin-top: 1em;
+    }
+    .card--3 {
+        grid-column: 3;
+        place-self: end;
+        margin-top: 2em;
+    }
+    .attribution {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+}
